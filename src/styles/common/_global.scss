@@ -36,7 +36,12 @@ body {
   }
 }
 
-.movie-item{
+.flex{
+  display: flex;
+  justify-content: space-around;
+}
+
+.movie-item, .tvShow-item{
   background-position: center;
   background-size: cover;
   position: relative;
@@ -68,7 +73,7 @@ body {
     padding: 15px;
   }
 
-  p {
+  p{
     color: white;
     font-weight: light;
     position: relative;
@@ -77,14 +82,24 @@ body {
     display: none;
     padding: 15px;
   }
+  button{
+      @extend p;
+      text-decoration: underline;
+      background:none;
+      border:none;
+  }
+
+  div{
+    background-color: black;
+  }
 
   &:hover {
     .overlay {
       top: 0;
     }
-
-    p {
+    p, button {
       display: block;
     }
   }
 }
+
